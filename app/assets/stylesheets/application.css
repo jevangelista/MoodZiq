@@ -15,6 +15,14 @@
  *= require bootstrap
  */
 
+
+
+
+
+/*
+Accent Color?
+   #20C1D2
+*/
 body {
   padding-top: 100px;
 }
@@ -37,4 +45,27 @@ input#genre{
 
 .btn{
   margin: 2px;
+}
+
+/*
+/////////////////////////////////////////////////////////////
+               Profile Dashboard CSS
+/////////////////////////////////////////////////////////////
+*/
+
+#profile-wrapper {
+   z-index: 9;
+   position: absolute;
+   background-color: black;
+   background-image:
+	 radial-gradient(
+	   grey, black
+	 );
+
+	text-align: center;
+   color: #D2CECE;
+   border: 3px #20C1D2 solid;
+   border-radius: 10px;
+   display: none;
+   padding: 10px;
 }

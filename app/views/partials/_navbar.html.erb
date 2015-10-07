@@ -1,55 +1,78 @@
 <div class="navbar navbar-default navbar-static-top navbar-inverse">
-  <div class="container">
 
-     <div class="navbar-header">
-           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="/home">MoodZiq</a>
-  </div>
+   <div class="wrap">
 
-   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li><a href="/">Home</a></li>
-        <li><a href="/playlists">Playlists</a></li>
-       </ul>
-
-    <div class="col-md-3 col-md-offset-9" id="profile">
-         <% if current_user %>
-         <% @user = @current_user %>
-         <div class="media">
-            <div class="media-left media-body pull-left">
-               <h4 class="media-header"> <%= @user.name %> </h4>
-               <ul class="list-unstyled">
-                  <li>User Created</li>
-                  <li>Stuff</li>
-               </ul>
-               <div class="button-group" role="group">
-                  <%= button_to "Logout", logout_path, method: "get", class: "red btn btn-default btn-xs navbar-right navbar-btn" %>
-                  <button class="btn btn-xs btn-default">Playlists</button>
-               </div>
-            </div>
-            <div class="media-right">
-               <img class="media-object" src="<%= @user.photo %>" height="64" width="64">
-            </div>
-         </div>
-         <% else %>
-         <div id="init-user-btns">
-            <%= button_to "Login", sign_in_path, method: "get", class: "btn btn-default navbar-right navbar-btn" %>
-            <%= button_to "Sign Up", new_user_path, method: "get", class: "btn btn-default navbar-right navbar-btn" %>
-         </div>
-         <% end %>
+      <div class="navbar-header">
+         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+         </button>
+         <a class="navbar-brand" href="/">MoodZiq</a>
       </div>
 
-  </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+         <ul class="nav navbar-nav">
+           <li><a href="/">Home</a></li>
+           <li><a href="/playlists">Playlists</a></li>
+          </ul>
 
+         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class-"col-md-6 pull-left">
+               <ul class="nav navbar-nav">
+                  <li><a href="/home">Home</a></li>
+                  <li><a href="/playlists">Playlists</a></li>
+               </ul>
+            </div>
 
+            <div class="col-md-6 pull-right" id="profile-or-user-nav">
+               <% if current_user %>
+               <% @user = @current_user %>
 
+               <div class="col-md-3 pull-right" id="prof-pic-wrapper">
+                  <!-- <span class="caret"></span> -->
+                  <button role="button" class="btn btn-xs btn-default" id="drop-btn"><span class="caret"></span></button>
+                  <img class="pull-right" src="<%= @user.photo %>" height="64" width="64">
+               </div>
 
+               <% else %>
+               <div id="init-user-btns">
+                  <%= button_to "Login", sign_in_path, method: "get", class: "btn btn-default navbar-right navbar-btn" %>
+                  <%= button_to "Sign Up", new_user_path, method: "get", class: "btn btn-default navbar-right navbar-btn" %>
+               </div>
+               <% end %>
+            </div>
 
+         </div>
 
+      </div>
    </div>
+</div>
+
+<!-- Profile Dashboard -->
+<div class="col-md-3 col-md-offset-9 pull-right" id="profile-wrapper">
+
+   <div id="profile-dashboard">
+      <% if current_user %>
+      <% @user = @current_user %>
+      <div class="media">
+         <div class="media-left media-body pull-left">
+            <h4 class="media-header"> <%= @user.name %> </h4>
+            <ul class="list-unstyled">
+               <li>Member since: <%= time_ago_in_words(@user.created_at) %> ago.</li>
+               <li>Stuff</li>
+            </ul>
+         </div>
+         <div class="media-right pull-right">
+            <div class="button-group" role="group">
+               <%= button_to "Logout", logout_path, method: "get", class: "red pull-left btn btn-default btn-xs navbar-right navbar-btn" %>
+               <!-- Does nothing now, will redirect to user's playlists -->
+               <button role="button" class="btn btn-xs btn-default pull-left">Playlists</button>
+            </div>
+         </div>
+      </div>
+      <% end %>
+   </div>
+
 </div>
