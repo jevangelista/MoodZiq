@@ -93,6 +93,10 @@ input#minutes.form-control{
     height: 30px;
 }
 
+.navbar-btn{
+  margin-top: 7px;
+}
+
 
 /*carousel*/
 
