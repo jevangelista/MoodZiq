@@ -11,9 +11,9 @@ class UsersController < ApplicationController
 
 	    if @user.save
 		    login(@user)
-		    redirect_to "/start"
+		    redirect_to "/start", flash: { success: "Successfully signed up!" }
 		else
-			redirect_to "/splash"
+			redirect_to "/splash", flash: { error: @user.errors.full_messages.to_sentence + ". Please try again!"}
 		end
 
 	end
