@@ -8,7 +8,11 @@ Searching 1466 files for "popover" (regex, whole word)
     8   * This is a manifest file that'll be compiled into application.css, which will include all the files
 
 /Users/jevangelista/dev/music_app/public/assets/application-6ce0bc76993f6837a3644fa1d6fd2e6a497181173cea61c962903244d4b05f41.js:
- 10863  
+ 10863  (function() {
+ 10864    jQuery(function() {
+ 10865:     $("a[rel~=popover], .has-popover").popover();
+ 10866      return $("a[rel~=tooltip], .has-tooltip").tooltip();
+ 10867    });
 
 /Users/jevangelista/dev/music_app/vendor/assets/javascripts/bootstrap.js:
  1763  
