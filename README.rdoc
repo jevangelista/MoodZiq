@@ -1,28 +1,36 @@
-== README
+=MoodZiq
+=== To get started:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* bundle install
+* rake db:create
+* rake db:migrate
+* rails s
+* Check out player at localhost:3000
 
-Things you may want to cover:
+## Heroku Link 
+http://moodziq-player.herokuapp.com/
 
-* Ruby version
+## Description
+MoodZiq is a music app that allows you to generate and search for the perfect playlist for all your moods. It uses the SoundCloud API to generate a custom playlist for you. Generate a new playlist through searching by genre and duration. Check songs you want to keep, and update if you would like a new set of songs to populate in your playlist. Save playlists, tag them with moods, and view them in your playlist dashboard. Search playlists by mood, and see other playlists that others have tagged with the same mood, as well. 
 
-* System dependencies
+## User Stories 
+https://docs.google.com/document/d/1vlx6WJf_ul8DMucK81YjhLDh26zYo-9SP9468fxgUnY/edit
 
-* Configuration
+## Wireframes
+Check out our wireframes on Balsamiq [place URL here] 
 
-* Database creation
+## Entity Relationship Diagram
+User has many playlists. Playlist has many users. 
 
-* Database initialization
+## Technologies Used
+SoundCloud, Ruby on Rails, Bootstrap, jQuery, postgreSQL, Heroku, Git/GitHub, Rspec testing, BCrypt
 
-* How to run the test suite
+## Wishlist/Future Development
+In the future, we would like to create features, where users will be able to view an edit playlists, as well as giving them the ability to share playlists with friends. Another feature we would like to implement is giving users the ability to follow other users. In Version 2, we would also include more advanced mood search and tagging capabilities, using the Alchemy API to interpret search and match it to mooods. 
 
-* Services (job queues, cache servers, search engines, etc.)
+## Contributors
+* Nick Brennan - https://github.com/Nick-Brennan
+* Jamie Evangelista - https://github.com/jevangelista
+* Nathan Ockerman - https://github.com/Nathan-O
+* Tika Subedi - https://github.com/trsubedi
 
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
