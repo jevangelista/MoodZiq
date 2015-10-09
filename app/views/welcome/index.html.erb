@@ -41,21 +41,21 @@
             <!-- Modal -->
             <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
               <div class="modal-dialog" role="document">
-                <div class="modal-content">
+                <div class="modal-content motra">
                   <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                     <h4 class="modal-title" id="myModalLabel">Save Your Playlist</h4>
                   </div>
                   <div class="modal-footer">
                     <%= form_for @playlist do |f| %>
-
+                    <div class="form-group">
                     <%= f.hidden_field :tracks %>
                     <%= f.hidden_field :names %>
                     <%= f.hidden_field :duration%>
-                    <%= f.text_field :title, placeholder: 'name your playlist'%>
-                    <%= f.select :mood, [['Happy', 'happy'], ["Sad", 'sad'], ['Silly', 'silly'] ]%>
-                    <%= f.submit "Save" %>
-
+                    <%= f.text_field :title, placeholder: 'name your playlist', class: 'form-control'%>
+                    <%= f.select :mood, [['Happy', 'happy'], ["Sad", 'sad'], ['Silly', 'silly'] ],{}, {:class => 'form-control'}%>
+                    <%= f.submit "Save", class: 'btn btn-primary' %>
+                    </div>
                     <% end %>
                   </div>
                 </div>

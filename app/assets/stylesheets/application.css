@@ -242,3 +242,8 @@ a {
 .playlist-pan a {
    color: white;
 }
+
+#playlist_mood{
+  width: 33%;
+  margin-top: 8px;
+}
