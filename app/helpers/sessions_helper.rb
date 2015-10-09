@@ -11,7 +11,7 @@ module SessionsHelper
 
   def logged_in?
     if current_user == nil
-      redirect_to "/splash", flash: { error: "Sorry, please login to access our website!" }
+      redirect_to "/splash"
     end
   end
 
