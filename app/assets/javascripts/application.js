@@ -13,7 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
-//= require bootstrap.js.coffee
 //= require main
 //= require uploader
 //= require_tree .
