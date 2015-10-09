@@ -251,3 +251,11 @@ a {
 h1.caro-title{
   margin-bottom: 70px;
 }
+div.alert {
+  position: fixed;
+  z-index: 100;
+}
+
+.carousel .carousel-control { visibility: hidden; }
+
+.carousel-indicators li { visibility: hidden; }
