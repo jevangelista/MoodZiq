@@ -9,13 +9,13 @@
 
 
 
-playlists = Playlist.create([
-	{ duration: '45', mood: 'happy'},
-	{ duration: '25', mood: 'pensive'},
-	{ duration: '30', mood: 'zany'},
-	{ duration: '12', mood: 'curious'},
-	{ duration: '33', mood: 'sad'},
-])
+# playlists = Playlist.create([
+# 	{ duration: '45', mood: 'happy'},
+# 	{ duration: '25', mood: 'pensive'},
+# 	{ duration: '30', mood: 'zany'},
+# 	{ duration: '12', mood: 'curious'},
+# 	{ duration: '33', mood: 'sad'},
+# ])
 
   # create_table "playlists", force: :cascade do |t|
   #   t.integer  "created_by"
