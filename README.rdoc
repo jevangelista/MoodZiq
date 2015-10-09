@@ -5,7 +5,7 @@
 * rake db:create
 * rake db:migrate
 * rails s
-* Check out the player at localhost:3000
+* Check out player at localhost:3000
 
 ## Heroku Link 
 http://moodziq-player.herokuapp.com/
