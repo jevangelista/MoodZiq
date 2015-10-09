@@ -15,5 +15,5 @@
 //= require bootstrap
 //= require main
 //= require uploader
-
+//= require_tree .
 

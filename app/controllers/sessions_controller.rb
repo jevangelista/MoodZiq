@@ -12,8 +12,7 @@ class SessionsController < ApplicationController
   			redirect_to "/start"
 		else
 
-  			redirect_to "/splash", flash: { error: "Failed To Authenticate. Please try again." }
-		end
+  			redirect_to "/splash"
 	end
 
 	def destroy
