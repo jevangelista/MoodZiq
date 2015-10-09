@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 
 gem 'soundcloud'
 gem 'underscore-rails'
-gem "therubyracer"
+gem "therubyracer", :platform => :ruby
 gem "less-rails"
 gem 'less-rails-bootstrap'
 gem "twitter-bootstrap-rails"
