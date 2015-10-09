@@ -13,6 +13,7 @@
  *= require bootstrap
  *= require_tree .
  *= require_self
+
  */
 
 
@@ -116,7 +117,7 @@ input#minutes.form-control{
 .caro-pan {
   /**/
   height: 100%;
-  width: 100%
+  width: 100%;
   text-align: center;
   margin-left: 0px;
 }
