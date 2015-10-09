@@ -53,7 +53,7 @@
                     <%= f.hidden_field :names %>
                     <%= f.hidden_field :duration%>
                     <%= f.text_field :title, placeholder: 'name your playlist', class: 'form-control'%>
-                    <%= f.select :mood, [['Happy', 'happy'], ["Sad", 'sad'], ['Silly', 'silly'] ],{}, {:class => 'form-control'}%>
+                    <%= f.select :mood, [['Happy', 'happy'], ["Sad", 'sad'], ['Silly', 'silly'], ['Pensive', 'pensive'], ['Angry', 'angry'], ['Mellow', 'mellow'], ['Stoked', 'stoked'], ['Sleepy', 'sleepy'] ],{}, {:class => 'form-control'}%>
                     <%= f.submit "Save", class: 'btn btn-primary' %>
                     </div>
                     <% end %>
